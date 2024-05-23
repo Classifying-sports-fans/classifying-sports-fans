@@ -1,0 +1,78 @@
+Fan Features:
+From the marketing data frame, columns that may be of interest:
+-----
+- 'S1' (gender), 
+- 'S2' (age),
+- 'S4r1','S4r2','S4r3','S4r4','S4r5','S4r98','S4r99': ethnicity
+- Ethnicity Bucket: white, black, other?
+- 'D4': Household income
+    - 1: under 25,000
+    - 2: 25,000-49,999
+    - 3 50,000-74,999
+    - 4 75,000-99,999
+    - 5 100,000-149,999
+    - 6 150,000 or more
+- 'D5': employment status
+    - 1: Full time
+    - 2: Part time 
+    - 3: Not Employed
+    - 4: Homemaker
+    - 5: Retired
+    - 6: Prefer to not say
+- 'D6': Educational attainment
+    - 1: Some high school
+    - 2: High school grad
+    - 3: Vocational/trade school
+    - 4: Some college
+    - 5: College grad
+    - 6: Post-graduate degree
+    - 7: prefer not to say
+- 'S12r3': how many hours you spend watching in a typical week.
+- 'S13': how many hours watching the following sports programming
+    - 'S13r1' (live games
+    - 'S13r2' (highlight shows)
+    - 'S13r3' (docuseries)
+    - 'S13r4' (analysis/debate shows) 
+- 'S15' how much of a fan, 0-not a fan up to 6-obsessed fan.
+    - 'S15r1' (NFL)
+    - 'S15r2' (NBA)
+    - 'S15r3' (College Football)
+    - 'S15r4' (College Basketball)
+    - 'S15r5' (MLB)
+    - 'S15r6' (NHL)
+    - 'S15r7'(Inter. Soccer)
+    - 'S15r8' (MLS)
+    - 'S15r9' (CombatSports)
+    - 'S15r10' (nascar)
+    - 'S15r11' (F1)  
+ - 'VL1': acitivties have you done in the past year in conjunction with the sports you follow: 
+    - 'VL1r1'( went to a game)
+    - 'VL1r2' (watched at a sports bar)
+    - 'VL1r3' (watched at a friends home)
+    - 'VL1r4' (placed a bet at casino, etc)
+    - 'VL1r5' (listened to sports talk radio)
+    - 'VL1r6'(called into sports talk radio)
+    - 'VL1r7' (wore teams jersey)
+    - 'VL1r8'(watched at home)
+    - 'VL1r9' (talked about games in person/phone)
+    - 'VL1r10'(talked about games online
+    - 'VL1r11' (played in fantasy)
+    - 'VL1r12'(purchased multi-game tickets)
+    - 'VL1r13' (bet in a group pool)
+    - 'VL1r14' (played daily fantasy)
+    - 'VL1r15' (none) 
+- 'VL2': interest in betting on sports, 1: not at all, 6: very intersted.
+- 'TEAM6' Assuming games are available, how often will you watch the NFL games for the following teams. List teams with values 1: Every week, 2: most weeks, 3: some weeks, 4: only if its a big game,'TEAM6r1-32' are NFL teams.
+- 'NFL1': what do you subscribe to. (0: no, 1: yes)
+     - 'NFL1r1': NFL sunday ticket
+     - 'NFL1r2': NFL redzone 
+     - 'NFL1r3': NFL network 
+     - 'NFL1r4': None
+- 'NFL2': how frequently do you watch games in the following time slots, 1: Every week, 2: most weeks, 3: some weeks, 4:only if team is playing, 5: never
+     - 'NFL2r1': Thursday night
+     - 'NFL2r2': Sunday Early game
+     - 'NFL2r3': Sunday Late game
+     - 'NFL2r4': Sunday night football
+     - 'NFL2r5': Monday night football
+- 'NFL3': how often will you bet on NFL games this season, 1: I will not bet, 2: one or two weeks, 3: some weeks, 4: most weeks, 5: every week
+- 'NFL4': how many fantasy leagues do you play in, 1: none, 2: 1, 3: 2, 4: 3, 5: 4 or more. 
