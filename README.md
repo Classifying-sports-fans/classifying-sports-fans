@@ -28,7 +28,10 @@ K-nearest Neighbors
 Decision Trees/Random Forest
 Xgboost
 Neural networks
-Independent Variables/Features
+
+
+#### Independent Variables/Features
+
 We will create an Index/Magnitude of Fandom based on:
 
 -Fan Magniutde, based on [S15] - How much of a fan are you of the following sports?
@@ -45,7 +48,9 @@ We will create an Index/Magnitude of Fandom based on:
 [S15r10]NASCAR
 [S15r11]Formula 1
 
-Our outcome variables (KPI) will then be based on:
+-Team 6 Magnitude, based on [TEAM6] - Assuming games are available, how often will you watch the NFL games for the following teams. List teams with values 1: Every week, 2: most weeks, 3: some weeks, 4: only if its a big game,'TEAM6r1-32' are NFL teams.
+
+#### Our outcome variables (KPI) will then be based on:
 
 VL1 - Thinking of the last year, which of the following activities have you done in conjunction with the sports you follow? These variables are answered either 0 = No or 1 =  Yes, making it a nominal binary variable.
 -[VL1r1] Went to a game 
@@ -70,7 +75,7 @@ VL1 - Thinking of the last year, which of the following activities have you done
 
 -[NFL4] How many fantasy football leagues do you play in? (None, 1, 2, 3, 4 or more)
 
--Potential Control Variables 
+#### Potential Control Variables 
 
 -[S1] Gender
 -[S2]  Age
