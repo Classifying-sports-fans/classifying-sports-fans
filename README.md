@@ -2,7 +2,7 @@
 
 A repository of code for the Erdos Institute's May 2024 Data Science Bootcamp
 
-Project Title: Classifying Sports Fans
+## **Project Title: Classifying Sports Fans**
 Members: Mariah Warner, Deepisha Solanki, Rudy Perkins, Ryan Moruzzi, Sujoy Upadhyay, and Jacob Kepes
 Project Mentor: Mohammad Noorandisoot
 
@@ -17,7 +17,7 @@ Key Performance Indicators (KPIs):
 - how well our model predicts fan activites (going to a game, betting, etc.) based off self-described fandom. 
 
 
-Modeling Approach:
+### Modeling Approach:
 
 We are attempting to identify different types of sports fans based on their self-reported fandom (S15) and demographics and their likelihood to engage in certain activities (VL1). From S15, we are going to create an index of fan magnitude based on different types of sports fans. Our group is going to try several modeling approaches, based on a 20% training split, to see which stand out and perform better, including logistic regression and various classification models. From these models, we expect to be able to correctly identify someone’s likelihood of participating in various fan activities, including attending a sports game and other VL1 variables. We expect fan magnitude to be conditional on other variables, like income, race, age, and gender. We will then identify how accurate these models are.
 
@@ -81,7 +81,7 @@ VL1 - Thinking of the last year, which of the following activities have you done
 
 
 
-Expectations and EDA:
+### Expectations and EDA:
 
 Based on our initial Exploratory Data Analysis (EDA) we expect to be able to predict with some accuracy the following VL1** variables’ outcomes using a classification model. We expect Knn, RandomForests, or XGBoost to be among the best models for this problem. 
 
