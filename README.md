@@ -29,7 +29,8 @@ Xgboost
 Neural networks
 Independent Variables/Features
 We will create an Index/Magnitude of Fandom based on:
-S15 - How much of a fan are you of the following sports?
+
+-Fan Magniutde, based on [S15] - How much of a fan are you of the following sports?
 1 - Not a fan of this sport : 6 - Obsessed fan of this sport
 [S15r1]NFL
 [S15r2]NBA
@@ -42,36 +43,40 @@ S15 - How much of a fan are you of the following sports?
 [S15r9]Combat Sports
 [S15r10]NASCAR
 [S15r11]Formula 1
-This can be interpreted as (5,5) for fans of both, (1,5) for fan of one but not the other
+
 Our outcome variables (KPI) will then be based on:
+
 VL1 - Thinking of the last year, which of the following activities have you done in conjunction with the sports you follow? These variables are answered either 0 = No or 1 =  Yes, making it a nominal binary variable.
-[VL1r1] Went to a game 
-[VL1r2] Watched a game at a sports bar
-[VL1r3] Watched a game at a friend’s home
-[VL1r4] Place a bet
-[VL1r5] Listened to sports radio
-[VL1r6] Called into a sports radio show
-[VL1r7] Wore my team’s jersey
-[VL1r8] Watched games at home
-[VL1r9] Talked about games in person/over the phone
-[VL1r10] Talked about games online
-[VL1r11] Played in a fantasy sports league
-[VL1r12] Purchased a multi-game ticket page
-[VL1r13] Bet in a group pool
-[VL1r14] Plated daily fantasy
-[S12r3] Hours Watching Sports in a Typical Week
-0-120 Hours
-[NFL3] How often do you think you will bet on NFL games this NFL season?
-I will not bet on NFL Games this season, One or two weeks, Some weeks, Most Weeks, Every Week
-[NFL4] How many fantasy football leagues do you play in?
-None, 1, 2, 3, 4 or more
-Potential Control Variables 
-[S1] Gender
-[S2]  Age
-[D4] Household Income (Categorical)
-[D5]  Employment Status
-[D6]  Educational Attainment
-[Hid_Ethnicity_Bucket] Race/Ethnicity
+-[VL1r1] Went to a game 
+-[VL1r2] Watched a game at a sports bar
+-[VL1r3] Watched a game at a friend’s home
+-[VL1r4] Place a bet
+-[VL1r5] Listened to sports radio
+-[VL1r6] Called into a sports radio show
+-[VL1r7] Wore my team’s jersey
+-[VL1r8] Watched games at home
+-[VL1r9] Talked about games in person/over the phone
+-[VL1r10] Talked about games online
+-[VL1r11] Played in a fantasy sports league
+-[VL1r12] Purchased a multi-game ticket page
+-[VL1r13] Bet in a group pool
+-[VL1r14] Plated daily fantasy
+
+-[S12r3] Hours Watching Sports in a Typical Week (0-120 Hours)
+
+-[NFL3] How often do you think you will bet on NFL games this NFL season?
+-I will not bet on NFL Games this season, One or two weeks, Some weeks, Most Weeks, Every Week
+
+-[NFL4] How many fantasy football leagues do you play in? (None, 1, 2, 3, 4 or more)
+
+-Potential Control Variables 
+
+-[S1] Gender
+-[S2]  Age
+-[D4] Household Income (Categorical)
+-[D5]  Employment Status
+-[D6]  Educational Attainment
+-[Hid_Ethnicity_Bucket] Race/Ethnicity
 
 
 Expectations and EDA:
