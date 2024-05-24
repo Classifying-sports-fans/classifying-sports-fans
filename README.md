@@ -16,6 +16,7 @@ Key Performance Indicators (KPIs):
 
 - how well our model predicts fan activites (going to a game, betting, etc.) based off self-described fandom. 
 
+
 Modeling Approach:
 
 We are attempting to identify different types of sports fans based on their self-reported fandom (S15) and demographics and their likelihood to engage in certain activities (VL1). From S15, we are going to create an index of fan magnitude based on different types of sports fans. Our group is going to try several modeling approaches, based on a 20% training split, to see which stand out and perform better, including logistic regression and various classification models. From these models, we expect to be able to correctly identify someone’s likelihood of participating in various fan activities, including attending a sports game and other VL1 variables. We expect fan magnitude to be conditional on other variables, like income, race, age, and gender. We will then identify how accurate these models are.
@@ -77,6 +78,7 @@ VL1 - Thinking of the last year, which of the following activities have you done
 -[D5]  Employment Status
 -[D6]  Educational Attainment
 -[Hid_Ethnicity_Bucket] Race/Ethnicity
+
 
 
 Expectations and EDA:
