@@ -81,3 +81,30 @@ VL1 - Thinking of the last year, which of the following activities have you done
 
 Expectations and EDA:
 
+Based on our initial Exploratory Data Analysis (EDA) we expect to be able to predict with some accuracy the following VL1** variables’ outcomes using a classification model. We expect Knn, RandomForests, or XGBoost to be among the best models for this problem. 
+
+Based on the outcome VL1** variables, different variables appeared relevant. 
+
+Here are some of our initial findings:
+
+-Age, Household Income, and Fan Magnitude appeared to be related to whether a fan attended a game
+
+-Age, Household Income, and Fan Magnitude appeared to be related to whether a fan watched a game at a sports bar
+
+-Age, Household Income and Fan Magnitude appeared to be related to whether a fan placed a bet at a casino
+
+-Household Income, Employment Status, and Fan Magnitude appeared to be related to whether a fan listened to sports talk radio
+
+-Age and Fan Magnitude were related to whether a fan talked about games online
+
+-Age, Household Income, and Fan Magnitude appeared to be related to whether a fan played in fantasy sports
+
+-Age, Household Income, and Fan Magnitude appeared to be related to whether a fan purchased multi-game tickets
+
+-Household Income, Team 6 Magnitude, and Interest in sports betting appeared to be related to whether a fan bet in a group pool
+
+-Age and Fan Magnitude appeared to be related to whether a fan played daily fantasy
+
+
+
+
