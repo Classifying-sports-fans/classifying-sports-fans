@@ -29,7 +29,7 @@ From the marketing data frame, columns that may be of interest:
     - 7: prefer not to say
 - 'S12r3': how many hours you spend watching in a typical week.
 - 'S13': how many hours watching the following sports programming
-    - 'S13r1' (live games
+    - 'S13r1' (live games)
     - 'S13r2' (highlight shows)
     - 'S13r3' (docuseries)
     - 'S13r4' (analysis/debate shows) 
