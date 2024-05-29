@@ -10,11 +10,12 @@ Description of the Dataset: The data for these analyses come from multiple origi
 
 Research Questions/Problem: Based on self-described fandom alone, some groups, like women, are potentially an untapped market that is not marketed towards. How can we predict different fan activities based on self-reported fandom and demographic variables? What is the likelihood of certain fan behaviors and activities based on self-described fandom and demographic variables? 
 
-Stakeholders: Streaming Services (Hulu, Roku, Amazon, etc.), TV Networks (Fox, ABC/ESPN), Gambling Companies (DraftKings, FanDuel, Fanatics), Sports Teams, and Sports Organizations (NFL, NHL, NBA, etc.) 
+#### Stakeholders: 
+Streaming Services (Hulu, Roku, Amazon, etc.), TV Networks (Fox, ABC/ESPN), Gambling Companies (DraftKings, FanDuel, Fanatics), Sports Teams, and Sports Organizations (NFL, NHL, NBA, etc.) 
 
-Key Performance Indicators (KPIs):
+#### Key Performance Indicators (KPIs):
 
-- how well our model predicts fan activites (going to a game, betting, etc.) based off self-described fandom. 
+The accuracy of our model predicting fan activites (going to a game, betting, etc.) based off particular demographic data and self-described fandom. 
 
 
 ### Modeling Approach:
