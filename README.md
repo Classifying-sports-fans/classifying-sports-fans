@@ -37,7 +37,7 @@ Neural networks
 We will create an Index/Magnitude of Fandom based on:
 
 -Fan Magniutde, based on [S15] - How much of a fan are you of the following sports?
-1 - Not a fan of this sport : 6 - Obsessed fan of this sport
+0 - Not a fan of this sport : 5 - Obsessed fan of this sport (shifted from scale 1 to 6)
 [S15r1]NFL
 [S15r2]NBA
 [S15r3]College Football
@@ -50,7 +50,20 @@ We will create an Index/Magnitude of Fandom based on:
 [S15r10]NASCAR
 [S15r11]Formula 1
 
--Team 6 Magnitude, based on [TEAM6] - Assuming games are available, how often will you watch the NFL games for the following teams. List teams with values 1: Every week, 2: most weeks, 3: some weeks, 4: only if its a big game,'TEAM6r1-32' are NFL teams.
+From this question, we viewed a response as a vector and took the Euclidean norm to form the fan magnitude score. By doing this, we are able to better compare responses without weighting one sport over another. For example, someone is an obsessed fan in only the NFL (S15r1) and not a fan in other sports will have the same fan magnitude as someone who is an obsessed fan in only the NBA (S15r2) and not a fan else. 
+
+-Team 6 Magnitude, based on [TEAM6] - Assuming games are available, how often will you watch the NFL games for the following teams. List teams with values 4: Every week, 3: most weeks, 2: some weeks, 1: only if its a big game,'TEAM6r1-32' are NFL teams (reversed scale from 1: every week to 4: only if in survey). This was formed simiilar the fan magnitude score, and allows us to better compare viewership of fans. 
+
+-[S12r3] Hours Watching Sports in a Typical Week (0-120 Hours)
+
+#### Potential Control Variables 
+
+-[S1] Gender
+-[S2]  Age
+-[D4] Household Income (Categorical)
+-[D5]  Employment Status
+-[D6]  Educational Attainment
+-[Hid_Ethnicity_Bucket] Race/Ethnicity
 
 #### Our outcome variables (KPI) will then be based on:
 
@@ -69,24 +82,6 @@ VL1 - Thinking of the last year, which of the following activities have you done
 -[VL1r12] Purchased a multi-game ticket page
 -[VL1r13] Bet in a group pool
 -[VL1r14] Plated daily fantasy
-
--[S12r3] Hours Watching Sports in a Typical Week (0-120 Hours)
-
--[NFL3] How often do you think you will bet on NFL games this NFL season?
--I will not bet on NFL Games this season, One or two weeks, Some weeks, Most Weeks, Every Week
-
--[NFL4] How many fantasy football leagues do you play in? (None, 1, 2, 3, 4 or more)
-
-#### Potential Control Variables 
-
--[S1] Gender
--[S2]  Age
--[D4] Household Income (Categorical)
--[D5]  Employment Status
--[D6]  Educational Attainment
--[Hid_Ethnicity_Bucket] Race/Ethnicity
-
-
 
 ### Expectations and EDA:
 
