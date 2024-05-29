@@ -1,19 +1,23 @@
 Keeper VL1 variables // Possibly important inputs for each
 
-Keep - 'VL1r1'( went to a game) // (S2, D4, Fan_mag)    
-Keep - 'VL1r2' (watched at a sports bar) // (S2, D4, Fan_mag)
-Lose? - 'VL1r3' (watched at a friends home) // (men of all ages, younger women, nothing to sell here)
-Keep - 'VL1r4' (placed a bet at casino, etc) // (S2, D4, Fan_mag) 
-Keep - 'VL1r5' (listened to sports talk radio) // (D4, D5, Fan_mag)
-Lose - 'VL1r6'(called into sports talk radio) // (too few oranges)
-Keep - 'VL1r7' (wore teams jersey) // (interesting, very even looking spread... hard to predict)
-Lose - 'VL1r8'(watched at home) // (Not interesting. Everyone watches at home)
-Lose - VL1r9 (talk about games) // (nothing to sell) 
-Keep - 'VL1r10'(talked about games online) [Might be a good input] // (S2, Fan_mag)
-Keep - 'VL1r11' (played in fantasy) // (D4, S2, Fan_mag)
-Keep - 'VL1r12'(purchased multi-game tickets) // (D4, S2, Fan_mag)
-Keep - 'VL1r13' (bet in a group pool) // (D4, T6_mag, VL2, obvs)
-Keep - 'VL1r14' (played daily fantasy) // (younger, higher fan score)
+Keep:
+ - 'VL1r1' (went to a game) // (S2, D4, Fan_mag)    
+ - 'VL1r2' (watched at a sports bar) // (S2, D4, Fan_mag)
+ - 'VL1r4' (placed a bet at casino, etc) // (S2, D4, Fan_mag) 
+ - 'VL1r5' (listened to sports talk radio) // (D4, D5, Fan_mag)
+ - 'VL1r7' (wore teams jersey) // (interesting, very even looking spread... hard to predict)
+ - 'VL1r10' (talked about games online) [Might be a good input] // (S2, Fan_mag)
+ - 'VL1r11' (played in fantasy) // (D4, S2, Fan_mag)
+ - 'VL1r12' (purchased multi-game tickets) // (D4, S2, Fan_mag)
+ - 'VL1r13' (bet in a group pool) // (D4, T6_mag, VL2, obvs)
+ - 'VL1r14' (played daily fantasy) // (younger, higher fan score)
+
+Lose:
+ - 'VL1r3' (watched at a friends home) // (men of all ages, younger women, nothing to sell here)
+ - 'VL1r6' (called into sports talk radio) // (too few oranges)
+ - 'VL1r8' (watched at home) // (Not interesting. Everyone watches at home)
+ - 'VL1r9' (talk about games) // (nothing to sell) 
+
 
 T6_mag looks valuable in EDA including it.
 
