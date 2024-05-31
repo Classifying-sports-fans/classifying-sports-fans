@@ -6,8 +6,7 @@ A repository of code for the Erdos Institute's May 2024 Data Science Bootcamp
 Members: Mariah Warner, Deepisha Solanki, Rudy Perkins, Ryan Moruzzi, Sujoy Upadhyay, and Jacob Kepes
 Project Mentor: Mohammad Noorandisoot
 
-## Background 
-#### Research Questions/Problem: 
+## Research Questions/Problem: 
 Based on self-described fandom alone, some groups may represent an untapped market that is currently overlooked. Can we, therefore, better predict different fan activities by considering self-reported fandom and various demographic variables? The goal is to identify and anticipate the populations engaging in these activities to develop more targeted marketing strategies.
 
 #### Stakeholders:
