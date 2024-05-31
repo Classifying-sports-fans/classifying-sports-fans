@@ -3,11 +3,12 @@
 A repository of code for the Erdos Institute's May 2024 Data Science Bootcamp
 
 ## **Project Title: Classifying Sports Fans**
-Members: Mariah Warner, Deepisha Solanki, Rudy Perkins, Ryan Moruzzi, Sujoy Upadhyay, and Jacob Kepes
+Members: Jacob Kepes, Ryan Moruzzi, Rudy Perkins, Deepisha Solanki, Sujoy Upadhyay, and Mariah Warner
+
 Project Mentor: Mohammad Noorandisoot
 
 ## Research Questions/Problem: 
-Based on self-described fandom alone, some groups may represent an untapped market that is currently overlooked. Can we, therefore, better predict different fan activities by considering self-reported fandom and various demographic variables? The goal is to identify and anticipate the populations engaging in these activities to develop more targeted marketing strategies.
+Based on self-described fandom alone, some groups may represent an untapped market that is currently overlooked. Can we, therefore, better predict different fan activities by considering self-reported fandom and various demographic data? The goal is to identify and anticipate the populations engaging in these activities to develop more targeted marketing strategies.
 
 #### Stakeholders:
 Streaming Services (Hulu, Roku, Amazon, etc.), TV Networks (Fox, ABC/ESPN), Gambling Companies (DraftKings, FanDuel, Fanatics), Sports Teams, and Sports Organizations (NFL, NHL, NBA, etc.) 
