@@ -6,109 +6,85 @@ A repository of code for the Erdos Institute's May 2024 Data Science Bootcamp
 Members: Mariah Warner, Deepisha Solanki, Rudy Perkins, Ryan Moruzzi, Sujoy Upadhyay, and Jacob Kepes
 Project Mentor: Mohammad Noorandisoot
 
-Description of the Dataset: The data for these analyses come from multiple original surveys used in the writing of Fans Have More Friends, a 2022 book by Ben Valenta and David Sikorjak. The surveys were administered by Prodege, an online marketing, consumer polling, and market research company, between February 2021-January 2022 with a purposeful goal of achieving a representative sample of U.S. adults for each survey. Following data cleaning, N=10,362 respondents/surveys.
+## Background 
+#### Research Questions/Problem: 
+Based on self-described fandom alone, some groups may represent an untapped market that is currently overlooked. Can we, therefore, better predict different fan activities by considering self-reported fandom and various demographic variables? The goal is to identify and anticipate the populations engaging in these activities to develop more targeted marketing strategies.
 
-Research Questions/Problem: Based on self-described fandom alone, some groups, like women, are potentially an untapped market that is not marketed towards. How can we predict different fan activities based on self-reported fandom and demographic variables? What is the likelihood of certain fan behaviors and activities based on self-described fandom and demographic variables? 
-
-#### Stakeholders: 
+#### Stakeholders:
 Streaming Services (Hulu, Roku, Amazon, etc.), TV Networks (Fox, ABC/ESPN), Gambling Companies (DraftKings, FanDuel, Fanatics), Sports Teams, and Sports Organizations (NFL, NHL, NBA, etc.) 
 
-#### Key Performance Indicators (KPIs):
+## Data
+#### Description of the Dataset: 
+The data for these analyses come from multiple original surveys used in the writing of Fans Have More Friends, a 2022 book by Ben Valenta and David Sikorjak. The surveys were administered by Prodege, an online marketing, consumer polling, and market research company, between February 2021-January 2022 with a purposeful goal of achieving a representative sample of U.S. adults for each survey. Following data cleaning, which included dropping rows for which the columns of interest were entirely null, the data had N=10,362 respondents/surveys with over 100 variables.
 
-The accuracy of our model predicting fan activites (going to a game, betting, etc.) based off particular demographic data and self-described fandom. 
+#### Preprocessing
+Our data set includes survey participants demographic information such as Age [S2], Household Income [D4], Gender (Categorical) [S1], Employment Status (Categorical) [D5] , Educational Attainment (Categorical) [D6] , Race/Ethnicity (Categorical) [Hid_Ethnicity_Bucket]. 
 
+There is also self-reported fandom [S15] that asks participants how much of a fan they are in 11 sports. Respondents are able to give a score from 1 - “Not a Fan” up to 6 - “Obsessed Fan of this Sport”. From these questions, we created a Fan magnitude variable, named fan_magnitude, which is the Euclidean norm of a participant's response.
+Similar to the self-reported fan score, there is a question asked about how often a respondent watches top five self-chosen teams in the National Football League [TEAM6r1-r32]. Respondents were able to choose values 4: Every week, 3: most weeks, 2: some weeks, 1: only if it’s a big game, (reversed scale from 1: every week to 4: only if in survey). We formed a team magnitude variable, called Team6_magnitude, that was formed similar to the fan magnitude score. 
 
-### Modeling Approach:
+## Models
+#### KPIs
+We will measure the accuracy of predicting various fan activities using the following categorical variables against a baseline model of a random coin toss. 
 
-We are attempting to identify people's likelihood of engaging in certain activities (VL1) based on their self-reported fandom (S15) and demographic information (S2, D4). From S15, we created an index of fan magnitude based on different types of sports fans. Our group is going to try several modeling approaches, based on a 20% training split, to see which stand out and perform better, including logistic regression and various classification models. From these models, we expect to be able to correctly identify someone’s likelihood of participating in various fan activities, including attending a sports game and other VL1 variables. We expect fan magnitude to be conditional on other variables, like income, race, age, and gender. We will then identify how accurate these models are.
-
-Our group has decided on implementing the following classifying models and determining which is most accurate:
-Logistic Regression
-K-nearest Neighbors
-Random Forest 
-AdaBoost 
-Gradient Boost
-Xgboost
-Neural networks
-
-
-#### Independent Variables/Features
-
-We will create an Index/Magnitude of Fandom based on:
-
--Fan Magniutde, based on [S15] - How much of a fan are you of the following sports?
-0 - Not a fan of this sport : 5 - Obsessed fan of this sport (shifted from scale 1 to 6)
-[S15r1]NFL
-[S15r2]NBA
-[S15r3]College Football
-[S15r4]College Basketball
-[S15r5]MLB
-[S15r6]NHL
-[S15r7]International Soccer
-[S15r8]MLS
-[S15r9]Combat Sports
-[S15r10]NASCAR
-[S15r11]Formula 1
-
-From this question, we viewed a response as a vector and took the Euclidean norm to form the fan magnitude score. By doing this, we are able to better compare responses without weighting one sport over another. For example, someone is an obsessed fan in only the NFL (S15r1) and not a fan in other sports will have the same fan magnitude as someone who is an obsessed fan in only the NBA (S15r2) and not a fan else. 
-
--Team 6 Magnitude, based on [TEAM6] - Assuming games are available, how often will you watch the NFL games for the following teams. List teams with values 4: Every week, 3: most weeks, 2: some weeks, 1: only if its a big game,'TEAM6r1-32' are NFL teams (reversed scale from 1: every week to 4: only if in survey). This was formed simiilar the fan magnitude score, and allows us to better compare viewership of fans. 
-
--[S12r3] Hours Watching Sports in a Typical Week (0-120 Hours)
-
-#### Potential Control Variables 
-
--[S1] Gender
--[S2]  Age
--[D4] Household Income (Categorical)
--[D5]  Employment Status
--[D6]  Educational Attainment
--[Hid_Ethnicity_Bucket] Race/Ethnicity
-
-#### Our outcome variables (KPI) will then be based on:
-
+#### Outputs of interest
 VL1 - Thinking of the last year, which of the following activities have you done in conjunction with the sports you follow? These variables are answered either 0 = No or 1 =  Yes, making it a nominal binary variable.
--[VL1r1] Went to a game 
--[VL1r2] Watched a game at a sports bar
--[VL1r3] Watched a game at a friend’s home
--[VL1r4] Place a bet
--[VL1r5] Listened to sports radio
--[VL1r6] Called into a sports radio show
--[VL1r7] Wore my team’s jersey
--[VL1r8] Watched games at home
--[VL1r9] Talked about games in person/over the phone
--[VL1r10] Talked about games online
--[VL1r11] Played in a fantasy sports league
--[VL1r12] Purchased a multi-game ticket page
--[VL1r13] Bet in a group pool
--[VL1r14] Plated daily fantasy
 
-### Expectations and EDA:
+[VL1r1] Went to a game 
+[VL1r10] Talked about games online
+[VL1r2] Watched a game at a sports bar
+[VL1r11] Played in a fantasy sports league
+[VL1r4] Place a bet
+[VL1r12] Purchased a multi-game ticket page
+[VL1r5] Listened to sports radio
+[VL1r13] Bet in a group pool
+[VL1r7] Wore my team’s jersey
+[VL1r14] Plated daily fantasy
 
-Based on our initial Exploratory Data Analysis (EDA) we expect to be able to predict with some accuracy the following VL1** variables’ outcomes using a classification model. We expect Knn, RandomForests, or XGBoost to be among the best models for this problem. 
+#### EDA / Model Selection
+We are interested in making predictions for [VL1] questions based on the inputs described above. Our Exploratory Data Analysis (EDA) consisted of examining the features relationships with one another using histograms and pairplots stratified by a categorical variable. These analyses suggested that S2 (Age), D4 (Income Bracket), and Fan Magnitude would play an important role in each of the outputs we were considering.
 
-Based on the outcome VL1** variables, different variables appeared relevant. 
+We considered several classification algorithms including Logistic Regression, K Nearest Neighbors (KNN), Random Trees, AdaBoost, XGBoost, and Neural Network (NN). We compared their performance on our training data using KFold cross-validation with 5 fold splits, and all performed similarly well with respect to our outputs of interest, with KNN performing the worst. We ultimately decided on Adaboost, as it had a slight advantage overall. 
 
-Here are some of our initial findings:
+## Final Model Choice and Performance
+Having selected AdaBoost as our algorithm of choice and after tuning the parameters, we trained it on our training data and ran predictions on our test data. The accuracies are as follows:
 
--Age, Household Income, and Fan Magnitude appeared to be related to whether a fan attended a game
+VL1: Thinking of the last year, which of the following activities have you done in conjunction with the sports you follow?
+Prediction accuracy
+Feature importance: 
+[Age, Income, Fan Magnitude]
+VL1r1: went to a game
+65.60%
+[0.2229, 0.0457, 0.7314]
+VL1r2: watched a game at a sports bar
+64.06%
+[0.3467, 0.1822, 0.4711]
+VL1r4: placed a bet through a sportsbook/etc
+78.39%
+[0.3857, 0.1486, 0.4657]
+VL1r5: listened to sports talk radio
+63.48%
+[0.2109, 0.0145, 0.7745]
+VL1r7: wore my team’s jersey
+59.14%
+[0.3707, 0.0185, 0.6108]
+VL1r10: talked about games online
+72.12%
+[0.3333, 0.1867 0.48])
+VL1r11: played in a fantasy sports league
+76.51%
+[0.30 , 0.32, 0.38]
+VL1r12: Purchased multi-game tickets
+92.76%
+[0.332, 0.288, 0.38 ]
+VL1r13: Bet in a group pool
+79.31%
+[0.2733, 0.06, 0.6667]
+VL1r14: Played daily fantasy
+83.36%
+[0.416, 0.16 , 0.424]
 
--Age, Household Income, and Fan Magnitude appeared to be related to whether a fan watched a game at a sports bar
 
--Age, Household Income and Fan Magnitude appeared to be related to whether a fan placed a bet at a casino
-
--Household Income, Employment Status, and Fan Magnitude appeared to be related to whether a fan listened to sports talk radio
-
--Age and Fan Magnitude were related to whether a fan talked about games online
-
--Age, Household Income, and Fan Magnitude appeared to be related to whether a fan played in fantasy sports
-
--Age, Household Income, and Fan Magnitude appeared to be related to whether a fan purchased multi-game tickets
-
--Household Income, Team 6 Magnitude, and Interest in sports betting appeared to be related to whether a fan bet in a group pool
-
--Age and Fan Magnitude appeared to be related to whether a fan played daily fantasy
-
-
-
+## Future Directions:
+In an effort to whittle our features down to those most relevant for predicting the fan activities of interest, we focussed our analyses on Age, Income Bracket, and Fan Magnitude, as described above. On many outputs, we were able to make predictions more accurately than a random coin flip. Currently, our model can predict with 65% accuracy whether or not a given person will go to a sports game based on Age, Income Bracket, and Fan Magnitude alone. Moving forward, it would be interesting to incorporate more demographic information, like race and gender, to test whether our model’s accuracy remains consistent or when our model is restricted to just men or just women. Finally, with the rise of sports betting and time spent online, companies likely collect all sorts of information beyond basic demographics, and modeling approaches with these data could become very specific, which would be of interest to us.
 
