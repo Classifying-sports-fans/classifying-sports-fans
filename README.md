@@ -73,6 +73,29 @@ VL1: Thinking of the last year, which of the following activities have you done 
 
 `VL1r14: Played daily fantasy`, 83.36%, [0.416, 0.16 , 0.424]
 
+#### Precision and Recall 
+              
+`VL1r1`:   Precision 52.52%       Recall  35.37%
+
+`VL1r2`:   Precision 57.77%       Recall 47.42%
+
+`VL1r4`:   Precision 57.69%       Recall  16.03%
+
+`VL1r5`:   Precision 60.2%        Recall  57.96%
+
+`VL1r7`:   Precision 59.27%       Recall  74.86%
+
+`VL1r10`:  Precision 61.04%       Recall  35.44%
+
+`VL1r11`:  Precision 60.42%       Recall  27%
+
+`VL1r12`:  Precision 66.67%       Recall  3.92%
+
+`VL1r13`:  Precision 51%          Recall  11.83%
+
+`VL1r14`:  Precision 53.66%       Recall  18.64%
+
+
 ## Future Directions:
 In an effort to whittle our features down to those most relevant for predicting the fan activities of interest, we focused our analyses on Age, Income Bracket, and Fan Magnitude, as described above. On many outputs, we were able to make predictions more accurately than a random coin flip. Currently, our model can predict with 65% accuracy whether or not a given person will go to a sports game based on Age, Income Bracket, and Fan Magnitude alone. Moving forward, it would be interesting to incorporate more demographic information, like race and gender, to test whether our model’s accuracy remains consistent or when our model is restricted to just men or just women. Finally, with the rise of sports betting and time spent online, companies likely collect all sorts of information beyond basic demographics, and modeling approaches with these data could become very precise, which would be of interest to us.
 
